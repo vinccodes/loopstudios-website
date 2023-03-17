@@ -1,0 +1,319 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* COLOURS */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-darkgray: hsl(0, 0%, 55%);
+    --clr-very-darkgray: hsl(0, 0%, 41%);
+    --clr-black: hsl(0, 0%, 0%);
+
+
+    /* Font sizes */
+
+}
+
+/* nav */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Alata', sans-serif;
+    margin: 2rem 4rem;
+    padding: 0rem 4rem;
+}
+
+.logo {
+    color: var(--clr-white);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+} 
+
+.nav__links a {
+    
+    margin: 15px;
+    text-decoration: none;
+    color: var(--clr-white)
+}
+
+.nav__links a:hover {
+    border-bottom: 2px solid var(--clr-white);
+}
+
+
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: 650px;
+    color: var(--clr-white);
+    background: url('/images/desktop/image-hero.jpg') no-repeat rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-size: cover;
+    padding: 2rem 8rem;
+    /* extend the hero section to top of the page for the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+.hero__lead {
+    border: 2px solid var(--clr-white);
+    width: max-content;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 4em;
+    margin-top: 8rem;
+}
+
+
+/* About Section */
+
+#about {
+    width: 100%;
+    height: 660px;
+    margin-top: 650px;
+    padding: 10rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.about__img, .about__content {
+    grid-row: 1 / 2;
+}
+
+.about__img {
+    grid-column: 1 / 3;
+   
+}
+
+/* .about__flex {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    left: 32.625rem; 
+    
+    
+} */
+
+.about__content {
+    align-self: flex-end;
+    background-color: var(--clr-white);
+    padding: 6rem 6rem 0 6rem;
+    grid-column: 3 / -1;
+    
+    
+}
+
+.about__lead {
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.about__description {
+    font-family: 'Alata', sans-serif;
+    color: var(--clr-darkgray);
+}
+
+/* Creations Section */
+
+#creations {
+    width: 100%;
+    height: 1100px;
+    padding: 8rem;
+}
+
+.creations__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.creations__lead {
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.creations__btn {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border: 1px solid var(--clr-very-darkgray);
+    padding: 15px 25px;
+    text-decoration: none;
+}
+
+.creations__btn a:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+}
+
+.creations__btn--mobile {
+    display: none;
+}
+
+/* Creations Gallery */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat (2, 1fr);
+    max-height: 930px;
+    gap: 25px 25px;
+
+
+}
+
+.creation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+.creation-item:hover{
+    opacity: 0.7;
+    color: var(--clr-black);
+    
+}
+
+.creations-01 {
+    width: 300px;
+    height: 500px;
+    background-image: url('../images/desktop/image-deep-earth.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations-02 {
+    background-image: url('../images/desktop/image-night-arcade.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations-03 {
+    background-image: url('../images/desktop/image-soccer-team.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations-04 {
+    background-image: url('../images/desktop/image-grid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* row 2 */
+.creations-05 {
+    width: 300px;
+    height: 500px;
+    background-image: url('../images/desktop/image-from-above.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations-06 {
+    background-image: url('../images/desktop/image-pocket-borealis.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations-07 {
+    background-image: url('../images/desktop/image-curiosity.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations-08 {
+    background-image: url('../images/desktop/image-fisheye.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creations__description {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--clr-white);
+}
+
+/* Footer section */
+footer {
+    margin-top: 185px;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    padding: 4rem 8rem;
+    font-family: 'Alata', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.footer-logo {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+.footer-navlinks a {
+    text-decoration: none;
+    color: var(--clr-white);
+    margin-right: 32px;
+}
+
+.footer-navlinks a:hover {
+    border-bottom: 2px solid var(--clr-white);
+}
+
+
+/*footer-left */
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.socials-icon {
+    margin: 5px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.socials-icon:hover {
+
+    border-bottom: 2px solid var(--clr-white);
+}
+
+.copyright {
+    color: var(--clr-darkgray);
+}
